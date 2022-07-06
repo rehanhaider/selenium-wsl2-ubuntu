@@ -35,3 +35,8 @@ Install Chrome & Chromedriver
 ```bash
 ./install-selenium.sh
 ```
+
+Run a python program (I can't believe I have to mention this)
+```bash
+python3 run_selenium.py
+```
