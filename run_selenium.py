@@ -11,12 +11,13 @@ from selenium.webdriver.chrome.options import Options
 
 ## Setup chrome options
 chrome_options = Options()
-chrome_options.add_argument("--headless") # Ensure GUI is off
+chrome_options.add_argument("--headless")  # Ensure GUI is off
 chrome_options.add_argument("--no-sandbox")
 
 # Set path to chromedriver as per your configuration
 homedir = os.path.expanduser("~")
-webdriver_service = Service(f"{homedir}/chromedriver/stable/chromedriver")
+chrome_options.binary_location = f"{homedir}/chrome-linux64/chrome"
+webdriver_service = Service(f"{homedir}/chromedriver-linux64/chromedriver")
 
 # Choose Chrome Browser
 browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
@@ -28,6 +29,6 @@ browser.get("https://cloudbytes.dev")
 description = browser.find_element(By.NAME, "description").get_attribute("content")
 print(f"{description}")
 
-#Wait for 10 seconds
+# Wait for 10 seconds
 time.sleep(10)
 browser.quit()
