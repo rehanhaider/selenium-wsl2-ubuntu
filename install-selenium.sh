@@ -37,10 +37,12 @@ wget $(echo "$meta_data" | jq -r '.channels.Stable.downloads.chromedriver[0].url
 echo "Unzip the binary file and make it executable..."
 unzip chromedriver-linux64.zip
 
-echo "Install Selenium..."
-python3 -m pip install selenium
-
 echo "Removing archive files"
 rm chrome-linux64.zip  chromedriver-linux64.zip
 
 popd
+
+echo "Install Selenium & dependencies..."
+python3 -m venv .env
+source .env/bin/activate
+pip install -r requirements.txt
