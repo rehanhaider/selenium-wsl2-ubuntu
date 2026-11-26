@@ -76,7 +76,6 @@ install_system_packages() {
         libnspr4
         libnss3
         libpango-1.0-0
-        libu2f-udev
         libvulkan1
         libx11-6
         libx11-xcb1
