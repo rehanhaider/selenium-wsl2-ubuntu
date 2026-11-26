@@ -56,6 +56,9 @@ install_system_packages() {
         return 1
     fi
 
+    log "Updating apt package metadata..."
+    run_sudo apt-get update
+
     local asound_package
     asound_package="$(resolve_package libasound2t64 libasound2)"
 
@@ -97,9 +100,6 @@ install_system_packages() {
         python3-venv
         xdg-utils
     )
-
-    log "Updating apt package metadata..."
-    run_sudo apt-get update
 
     log "Installing Chrome/Selenium runtime dependencies..."
     run_sudo apt-get install -y "${packages[@]}"
