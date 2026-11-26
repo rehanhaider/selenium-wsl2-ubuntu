@@ -10,7 +10,7 @@ Python script.
 
 ## Requirements
 
-- Ubuntu on WSL2
+- Ubuntu on WSL2 (tested on Ubuntu 22.04, 24.04 and 26.04)
 - Python 3.10 or newer
 - `sudo` access for installing system packages
 - Internet access on the first Selenium run so Selenium Manager can populate
