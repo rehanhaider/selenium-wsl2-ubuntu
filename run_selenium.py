@@ -46,7 +46,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--browser-version",
         help=(
-            'Ask Selenium Manager for a browser version or channel, '
+            "Ask Selenium Manager for a browser version or channel, "
             'such as "stable" or "beta".'
         ),
     )
